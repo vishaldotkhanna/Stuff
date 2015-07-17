@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if error %}
+	<h2 style = 'color: red;'> {{ error }} </h2>
+{% endif %}
+
+<form action = '{{ url_for("register") }}' method = 'post'>
+	Choose a username: <input type = 'text' name = 'username'> <br> <br>
+	Enter a password: <input type = 'password' name = 'password'> <br> <br>
+	Confirm your password: <input type = 'password' name = 'confirm'> <br> <br> 
+	Enter your email address: <input type = 'text' name = 'email'> <br> <br>
+	<input type = 'submit' value = 'Register'>
+</form>
+
+{% endblock %}
+
