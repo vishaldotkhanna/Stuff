@@ -52,7 +52,7 @@ def send_mail(toAddr, uname, pword):
 	server.sendmail(fromAddr, toAddr, str(data))
 	server.quit()
 
-
+create_table()
 
 #views 
 
