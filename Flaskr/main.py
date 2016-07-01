@@ -48,7 +48,7 @@ def send_mail(toAddr, uname, pword):
 	server.ehlo()
 	server.starttls()
 	server.ehlo()
-	server.login('noreply.server442', 'testaccount42')
+	server.login('noreply.server442', 'password')
 	server.sendmail(fromAddr, toAddr, str(data))
 	server.quit()
 
