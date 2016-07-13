@@ -1,0 +1,90 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<cmath>
+
+using namespace std;    //Stack as an array.
+
+#define MAX 50
+typedef long long LL;
+
+class Stack
+{
+    int st[MAX], top;
+
+public:
+
+    Stack()
+    {
+        top = -1;
+    }
+
+    int peek()
+    {
+        if(top == -1)
+        {
+            cout<<"Stack is empty.";
+            return 0;
+        }
+
+        return st[top];
+    }  //Return top element.
+
+    bool isFull()
+    {
+        if(top == (MAX - 1))
+            return true;
+
+        return false;
+    }
+
+    bool isEmpty()
+    {
+        if(top == -1)
+            return true;
+
+        return false;
+    }
+
+    int pop()
+    {
+        if(isEmpty())
+        {
+            cout<<endl<<"Underflow";
+            return 0;
+        }
+
+        return st[top--];
+    }
+
+    int push(int val)
+    {
+        if(isFull())
+        {
+            cout<<endl<<"Overflow";
+            return 0;
+        }
+
+        st[++top] = val;
+        return 0;
+    }
+
+    int print()
+    {
+        cout<<endl<<"Stack: "<<endl;
+
+        for(int i = top;i >= 0;i--)
+            cout<<endl<<st[i];
+    }
+};
+
+int main()
+{
+    Stack s;
+    s.pop();
+    s.push(3);
+    s.push(5);
+    s.print();
+    s.pop();
+    s.print();
+}
