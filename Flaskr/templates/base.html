@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+	<title> Flaskr, simple blog based on Flask </title>
+	<link rel = 'stylesheet' href = '{{ url_for("static", filename = "style.css") }}'>
+</head>
+
+<body>
+	
+	<div>
+		<h1 class = 'title'> Flaskr </h1> <br> 
+		<div class = 'nav'>
+			
+			{% if not session.logged_in %}
+				<a href = '/login'>Login</a>
+				<a href = '/register'>Register</a>
+			{% else %}
+				<a href = '/logout'>Logout</a>
+			{% endif %}
+		</div>
+		<hr>
+
+		{% for message in get_flashed_messages() %}
+			<div> {{ message }} </div>
+		{% endfor %}
+	</div>
+
+	{% block content %} {% endblock %}
+
+</body>
+</html>
+
