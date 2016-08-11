@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<style type="text/css">
+		.board	{
+			margin-left: 30vw;
+			margin-right: 30vw;
+			width: 40vw;
+			margin-top: 5vh;
+			border-collapse: collapse;
+		}
+
+		.board td	{
+			height: 10vw;
+			width: 10vw;
+			padding: 0;
+			text-align: center;
+			font-size: 90px;
+			background-color: #887BD7;
+		}
+
+		.board td:hover    {
+			background-color: #F1FF83;
+		}
+
+		.board tr	{
+			border-bottom: 5px solid Black;
+		}
+
+		.board .last	{
+			border: none;
+		}
+
+		.board .col    {
+			border-right: 5px solid Black;
+		}
+
+		.turn	{
+			width: 50vw;
+			margin-left: 25vw;
+			margin-right: 25vw;
+			margin-top: 0vh;
+			text-align: center;
+			font-size: 40px;
+		}	
+
+		.reset    {
+			text-align: center;
+			margin-left: 46%;
+			width: 8%;
+			font-size: 20px;
+			padding: 2px;
+
+		}
+	</style>
+</head>
+<body>
+	<h2 class = 'turn'>Player <b id = 'player-indicator'>1's</b> turn</h2>
+	<button class = 'reset' onclick = "location.reload();">Reset</button>
+	<table class = 'board' id = 'b'>
+		<tr>
+			<td class = 'col' id = '1'></td>
+			<td class = 'col'></td>
+			<td id = '3'></td>
+		</tr>
+		<tr>
+			<td class = 'col'></td>
+			<td class = 'col'></td>
+			<td class = 'edge'></td>
+		</tr>
+		<tr class = 'last'>
+			<td class = 'col'></td>
+			<td class = 'col'></td>
+			<td class = 'vertex'></td>
+		</tr>
+	</table>
+	<script type="text/javascript" src = 'tictac.js'></script>
+</body>
+</html>
