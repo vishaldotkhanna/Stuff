@@ -8,7 +8,7 @@ def getIP():
 sp = '\n'
 
 base = 'http://api.worldweatheronline.com/free/v2/weather.ashx?key='
-key = '3b7489f1af8a678b3cbb3f608006a'
+key = ''	#Get your API key from the website. 
 query = '&q='
 
 print('1 to get weather by entering a city and 2 to get weather by your IP address.')
